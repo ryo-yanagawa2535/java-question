@@ -30,7 +30,7 @@
                                     
                             <!-- formタグへth:actionで/houses/{houseId}/reviews/{reviewId}/updateを設定 -->
                             <!-- また、th:objectでreviewEditFormを設定 -->
-                            <form method="post" th:action="@{/houses/{houseId}/reviews/{reviewId}/update(houseId=${house.getId()}, reviewId=${review.getId()})}" th:object="${reviewEditForm}"> 
+                            <form method="post" th:action="@{/houses/__${house.getId()}__/reviews/__${review.getId()}__/update}" th:object="${reviewEditForm}"> 
                                 <!-- hiddenタグへth:fieldにてidを設定 -->
                                 <input type="hidden" th:field="*{id}">
                                                                                                                         

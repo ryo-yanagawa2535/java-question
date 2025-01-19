@@ -21,8 +21,10 @@ public class ReviewService {
 	@Transactional
 	public void create(House house, User user, ReviewRegisterForm reviewRegisterForm) {
 		                 Review review = new Review();
+		                 review.setHouse(house);
+		                 review.setUser(user);
 		                 review.setContent(reviewRegisterForm.getContent());
-		                 review.getScore(); 
+		                 review.setScore(reviewRegisterForm.getScore()); 
 		                 reviewRepository.save(review);
 	}
 
